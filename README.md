@@ -1,4 +1,4 @@
-# Simple Chat Application
+# Simple Chat-Log Application
 
 This is a basic chat application built using **HTML**, **CSS**, **JavaScript**, **Node.js**, **Express**, and **MongoDB RESTful APIs**. The purpose of this project was to practice MongoDB integration and learn CRUD operations in a hands-on manner.
 
