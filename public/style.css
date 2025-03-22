@@ -1,0 +1,84 @@
+body {
+  background-color: rgb(164, 186, 206);
+  margin-left: 20px;
+}
+
+.chat {
+  background-color: rgb(192, 226, 243);
+  width: 300px;
+  padding: 20px;
+  border-radius: 16px;
+  display: inline-block;
+}
+
+.msg {
+  background-color: dodgerblue;
+  color: white;
+  padding: 4px 15px;
+  border-radius: 16px;
+  font-size: 30px;
+}
+
+.details {
+  background-color: rgb(192, 226, 243);
+  color: black;
+  padding: 4px 15px;
+  border-radius: 16px;
+  display: inline-block;
+}
+
+.msg-btns {
+  background-color: dodgerblue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Hover effect */
+.button:hover {
+  background-color: darkblue;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+/* Button for create action */
+.create-btn {
+  background-color: green;
+}
+
+.create-btn:hover {
+  background-color: darkgreen;
+}
+
+/* Button for edit action */
+.edit-btn {
+  background-color: orange;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.edit-btn:hover {
+  background-color: darkorange;
+}
+
+/* Button for delete action */
+.delete-btn {
+  background-color: red;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: darkred;
+}

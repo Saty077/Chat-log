@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Chat Log</title>
+  </head>
+  <body>
+    <h3>All Chats</h3>
+    <form method="GET" action="/chats/new">
+      <button class="msg-btns create-btn">create new</button>
+    </form>
+
+    <br />
+
+    <% for(chat of Chats){ %>
+
+    <div class="chat">
+      <p>From : <i><%=chat.from %></i> %></p>
+
+      <div class="msg">
+        <p><%= chat.msg %></p>
+        <div class="msg-btns">
+          <form method="GET" action="/chats/<%= chat.id %>/edit">
+            <button class="edit-btn">Edit</button>
+          </form>
+          <form method="GET" action="/chats/<%= chat.id %>">
+            <button class="edit-btn">Show</button>
+          </form>
+          <form method="POST" action="/chats/<%= chat.id %>?_method=DELETE">
+            <button class="delete-btn">Delete</button>
+          </form>
+        </div>
+      </div>
+
+      <p>Received by <i><%= chat.to %></i></p>
+
+      <hr />
+      <p><%= chat.created_at.toString().split(" ")[4] %></p>
+      <p><%= chat.created_at.toString().split(" ").slice(0, 4).join("-") %></p>
+      <% if (chat.updated_at) { %>
+      <p>Updated At: <%= chat.updated_at.toString().split(" ")[4] %></p>
+      <% } %>
+    </div>
+
+    <br />
+    <br />
+
+    <% } %>
+  </body>
+</html>

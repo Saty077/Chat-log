@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Chat Log</title>
+  </head>
+  <body>
+    <h1>Chat Details:<h1>
+    <div class="details">
+        <p> ID : <%= chat.id %></p>
+        <p> From: <%= chat.from %></p>
+        <p> TO: <%= chat.to %></p>
+        <p> Message: <%= chat.msg %></p>
+        <p> Created At: <%= chat.created_at.toString().split(" ")[4] %></p>
+        <p> <%= chat.created_at.toString().split(" ").slice(0, 4).join("-") %></p>
+        <% if (chat.updated_at) { %>
+            <p>Updated At: <%= chat.updated_at.toString().split(" ")[4] %></p>
+        <% } %>
+    </div>
+
+  </body>
+</html>
